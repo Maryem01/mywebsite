@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import resumepdf from "../../Assets/Mariem_Hayder_cv -Sionx2";
-import resumepdf2 from "../../Assets/Mariem_Hayder_cvSio - Copie";
+import resumepdf from "../../Assets/Sionx2.pdf";
+import resumepdf2 from "../../Assets/Sio.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -16,8 +16,8 @@ function ResumeNew() {
     setWidth(window.innerWidth);
   }, []);
  const handleDownload = () => {
-   window.open(resumePdf1, "_blank");
-   window.open(resumePdf2, "_blank");
+   window.open(resumepdf, "_blank");
+   window.open(resumepdf2, "_blank");
  };
   return (
     <div>
