@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import resume from "../../Assets/Mariem_Hayder_CV_Sionx.pdf";
+import resumepdf from "../../Assets/Mariem_Hayder_CV_Sionx.pdf";
 
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
@@ -23,7 +23,7 @@ function ResumeNew() {
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={resume}
+            href={resumepdf}
             target="_blank"
             style={{ maxWidth: "250px" }}>
             <AiOutlineDownload />
