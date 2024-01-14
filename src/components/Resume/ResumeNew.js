@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import resumepdf from "../../Assets/Mariem_Hayder_CV_Sionx.pdf";
-
+import resumepdf from "../../Assets/Mariem_Hayder_cv -Sionx2";
+import resumepdf2 from "../../Assets/Mariem_Hayder_cvSio - Copie";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -15,7 +15,10 @@ function ResumeNew() {
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
-
+ const handleDownload = () => {
+   window.open(resumePdf1, "_blank");
+   window.open(resumePdf2, "_blank");
+ };
   return (
     <div>
       <Container fluid className="resume-section">
@@ -23,7 +26,7 @@ function ResumeNew() {
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={resumepdf}
+            onClick={handleDownload}
             target="_blank"
             style={{ maxWidth: "250px" }}>
             <AiOutlineDownload />
@@ -33,7 +36,10 @@ function ResumeNew() {
 
         <Row className="resume">
           <Document file={resumepdf} className="d-flex justify-content-center">
-            <Page pageNumber={2} scale={width > 786 ? 1.7 : 0.6} />
+            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+          </Document>
+          <Document file={resumepdf2} className="d-flex justify-content-center">
+            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
           </Document>
         </Row>
 
